@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ememte - Mateusz Turczyński | Software Developer</title>
+    <meta name="description" content="Ememte - Wizytówka Mateusza Turczyńskiego, Software Developera z Bielska-Białej.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ememte.pl/">
+    <meta property="og:title" content="Ememte - Mateusz Turczyński | Software Developer">
+    <meta property="og:description" content="Wizytówka Mateusza Turczyńskiego, Software Developera.">
+    <meta property="og:image" content="https://ememte.pl/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ememte.pl/">
+    <meta property="twitter:title" content="Ememte - Mateusz Turczyński | Software Developer">
+    <meta property="twitter:description" content="Wizytówka Mateusza Turczyńskiego, Software Developera.">
+    <meta property="twitter:image" content="https://ememte.pl/og-image.png">
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #020617;
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --text-dim: #94a3b8;
+            --primary: #3b82f6;
+            --primary-hover: #2563eb;
+            --border: rgba(30, 41, 59, 0.5);
+            --card-bg: rgba(15, 23, 42, 0.5);
+            --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+            --font-heading: 'Poppins', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem 1rem;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+            overflow-x: hidden;
+        }
+
+        main {
+            max-width: 28rem;
+            width: 100%;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 2.5rem 1.5rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            main {
+                padding: 4rem 3rem;
+            }
+        }
+
+        header {
+            margin-bottom: 2.5rem;
+        }
+
+        h1 {
+            font-size: 1.125rem;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            margin-bottom: 1rem;
+        }
+
+        .name {
+            font-size: 3.5rem;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            letter-spacing: -0.04em;
+            color: #ffffff;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.1;
+        }
+
+        .divider {
+            height: 0.25rem;
+            width: 2.5rem;
+            background-color: var(--primary);
+            margin: 0 auto;
+            border-radius: 9999px;
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+        }
+
+        .subtitle {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            letter-spacing: -0.01em;
+        }
+
+        address {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-bottom: 3.5rem;
+            font-style: normal;
+        }
+
+        @media (min-width: 480px) {
+            address {
+                gap: 2rem 1rem;
+            }
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-label {
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-size: 0.625rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.9375rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.375rem;
+            border: 1px solid transparent;
+        }
+
+        .contact-link:hover {
+            color: var(--primary);
+            background-color: rgba(59, 130, 246, 0.1);
+            border-color: rgba(59, 130, 246, 0.2);
+        }
+
+        .contact-link:focus-visible {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-text {
+            color: var(--text-dim);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <!-- Logo & Branding -->
+        <header>
+            <h1>Ememte</h1>
+            <div class="divider"></div>
+
+            <p class="name">Mateusz Turczyński</p>
+            <p class="subtitle">Software Developer</p>
+        </header>
+
+        <!-- Contact Data -->
+        <address aria-label="Dane kontaktowe">
+            <div class="contact-item">
+                <span class="contact-label">Email</span>
+                <a href="mailto:matturczynski@gmail.com" class="contact-link">matturczynski@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <span class="contact-label">Telefon</span>
+                <a href="tel:+48690691671" class="contact-link" aria-label="Zadzwoń: +48 690 691 671">+48 690 691
+                    671</a>
+            </div>
+        </address>
+
+        <!-- Footer -->
+        <footer>
+            <p class="footer-text">Bielsko-Biała, Polska</p>
+        </footer>
+    </main>
+</body>
+
+</html>
